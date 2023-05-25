@@ -31,18 +31,6 @@ namespace Balkezesek
             ballista.Where(x => x.UtolsoLepes.Year == 1999 && x.UtolsoLepes.Month == 10).ToList().ForEach(y => Console.WriteLine($"{y.Nev}, {Math.Round(y.MagassagInchben * inch, 1)} cm"));
 
             Console.WriteLine(new string('-', 40));
-
-            Console.WriteLine("5. feladat");
-            int input = 0;
-
-            do
-            {
-                Console.WriteLine("Kérem adjon meg egy évszámot 1990 és 1999 közzött!: ");
-                if (!(int.TryParse(Console.ReadLine(), out input) && input >= 1990 && input <= 1999))
-                {
-                    Console.WriteLine("Hibás adat!");
-                }
-            } while (!(input >= 1990 && input <= 1999));
         }
     }
 }
